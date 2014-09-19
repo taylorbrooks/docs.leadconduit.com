@@ -1,0 +1,60 @@
+body {
+  background: #F8F9F8;
+}
+
+header {
+  background: #fff;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.logo {
+  margin: 0;
+}
+
+h1.logo a {
+  background: url('../img/activeprospect-logo.jpg') no-repeat left center;
+  display: block;
+  height: 120px;
+  text-indent: -9999px;
+}
+
+h1.title a:hover {
+  text-decoration: none;
+}
+
+h1.title hr {
+  border-top: 1px solid #D4D7D5;
+  margin: 0;
+}
+
+h1.title span {
+  opacity: 0.5;
+}
+
+ul#menu {
+
+}
+
+ul#menu a {
+  color: #929497;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 6px 0;
+  display: block;
+}
+
+.slider {
+  img {
+    display: block;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+}

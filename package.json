@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "stylus": "latest",
+    "nib": "latest",
+    "grunt": "latest",
+    "grunt-run": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-stylus": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-s3": "latest",
+    "leadconduit-fields": "latest"
+  }
+}

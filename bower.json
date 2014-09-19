@@ -1,0 +1,14 @@
+{
+  "name": "leadconduit-docs",
+  "description": "LeadConduit Module Documentation",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "latest",
+    "lodash": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "font-awesome": "latest",
+    "bootstrap": "latest"
+  }
+}
