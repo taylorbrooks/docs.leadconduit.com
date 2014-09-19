@@ -8,7 +8,7 @@ angular.module('lcDocs.controllers', [])
       success(function(data, status) {
         $scope.modules = data;
         _.each($scope.modules, function(module){
-          console.log('balls',module);
+          console.log(module);
         });
 
       }).
