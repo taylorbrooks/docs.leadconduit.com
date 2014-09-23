@@ -19,15 +19,18 @@
     </header>
 
     <div class="container">
+      <div id="search" class="col-xs-10 col-xs-offset-2">
+        <input class="form-control input-lg" type="text" placeholder="search for fields" ng-model="searchText">
+      </div>
       <div class="col-xs-2">
         <h1>Modules</h1>
-        <p ng-repeat="module in modules" ng-click="do($event)">{{ module.name }}</p>
+        <p ng-repeat="module in modules" ng-click="do($event)">{{ module.id }}</p>
       </div>
 
       <div class="col-xs-10">
         <h1>Fields</h1>
-        <div class="panel panel-default" ng-repeat="module in modules">
-          <div class="panel-heading">{{ module.name }}</a></div>
+        <div class="panel panel-default" ng-repeat="module in modules | filter:searchText">
+          <div class="panel-heading">{{ module.id }}</a></div>
           <div class="panel-body">
             <ul ng-repeat="field in module.request_variables">
               <li>{{ field.name }} - {{ field.description }}</li>
