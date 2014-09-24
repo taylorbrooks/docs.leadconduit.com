@@ -11,17 +11,18 @@
 
   <body ng-app="lcDocs" ng-controller="DocsCtrl">
     <header>
-      <h1 class="logo">
-        <a href="/">
-          ActiveProspect
+      <div class="container">
+        <a href="/" class="logo col-xs-3">
+          <img src="../img/activeprospect-logo.jpg" alt="" width="" height="" border="0" class="img-responsive"/>
         </a>
-      </h1>
+        <div id="search" class="col-xs-8 pull-right">
+          <input class="form-control input-lg" type="text" placeholder="search for fields" ng-model="searchText">
+        </div>
+      </div>
     </header>
 
     <div class="container">
-      <div id="search" class="col-xs-10 col-xs-offset-2">
-        <input class="form-control input-lg" type="text" placeholder="search for fields" ng-model="searchText">
-      </div>
+
       <div class="col-xs-2">
         <h1>Modules</h1>
         <p ng-repeat="module in modules" ng-click="do($event)">{{ module.id }}</p>
@@ -32,7 +33,7 @@
         <div class="panel panel-default" ng-repeat="module in modules | filter:searchText">
           <div class="panel-heading">{{ module.id }}</a></div>
           <div class="panel-body">
-            <ul ng-repeat="field in module.request_variables">
+            <ul ng-repeat="field in module.request_variables | filter:searchText">
               <li>{{ field.name }} - {{ field.description }}</li>
             </ul>
           </div>
