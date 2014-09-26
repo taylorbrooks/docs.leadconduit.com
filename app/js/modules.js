@@ -4,7 +4,7 @@ angular.module('lcDocs.controllers', [])
   .controller('DocsCtrl', ['$scope', '$http', '$resource', '$location', '$anchorScroll',
     function($scope, $http, $resource, $location, $anchorScroll) {
 
-    $http.get('http://next.staging.leadconduit.com/modules').
+    $http.get('http://next.leadconduit.com/modules').
       success(function(data, status) {
         $scope.modules = data;
         _.each($scope.modules, function(module){
