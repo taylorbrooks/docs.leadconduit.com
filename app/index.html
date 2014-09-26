@@ -31,7 +31,10 @@
       <div class="col-xs-10">
         <h1>Fields</h1>
         <div class="panel panel-default" ng-repeat="module in modules | filter:searchText">
-          <div class="panel-heading">{{ module.id }}</a></div>
+          <div class="panel-heading">
+            {{ module.id }}
+            <span class="pull-right">{{ module.package.version }}</span>
+          </div>
           <div class="panel-body">
             <ul ng-repeat="field in module.request_variables | filter:searchText">
               <li>{{ field.name }} - {{ field.description }}</li>
